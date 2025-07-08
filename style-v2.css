@@ -1,0 +1,106 @@
+:root {
+  --text-color:#000000;
+  --background-color: #ffffff;
+  --accent-color: #5d29d6;
+  --card-bg: #f4f4f4;
+  --secondary-text-color: rgb(44, 54, 54);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #ecf0f1;
+    --background-color: #121212;
+    --card-bg: #1e1e1e;
+    --secondary-text-color: #b0b0b0;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-family: 'Lora', serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+header h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 3em;
+  margin-bottom: 5px;
+  text-align: center;
+  color: var(--accent-color);
+}
+header p {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  color: var(--secondary-text-color);
+}
+hr {
+  width: 50%;
+  border: none;
+  border-top: 1px solid var(--secondary-text-color);
+  margin: 20px auto;
+}
+.entries-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    width: 100%;
+}
+.entries-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--text-color);
+    font-size: 2em;
+}
+article {
+  background-color: var(--card-bg);
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease-in-out;
+}
+article:hover {
+    transform: translateY(-5px);
+}
+article h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: var(--accent-color);
+}
+article .post-date {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--secondary-text-color);
+  margin-bottom: 15px;
+  font-style: italic;
+  text-align: left; /* alinhamento mudado */
+}
+article p {
+  margin-top: 10px;
+  line-height: 1.6;
+}
+/* NOVO estilo do footer */
+footer {
+  background-color: var(--card-bg);
+  padding: 20px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  font-size: 0.85rem;
+  color: var(--text-color);
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto; /* 🔹 Isso centraliza */
+}
